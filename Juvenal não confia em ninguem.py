@@ -16,12 +16,15 @@ Seu programa deve imprimir uma única linha contendo um único número inteiro, 
 
 Resolução:
 '''
+#verifica os arredores para ver se navio é composto de mais de uma parte, e os numera.
 def encontrarnavios(matriz,i,j,n):
     if matriz[i][j] == '#':
         matriz[i][j] = n
         navios[n] += 1
     else:
         return
+
+    #limitam exatamente o tamanho do tabuleiro.
     if i-1 >= 0:
          encontrarnavios(matriz,i-1,j,n)
     if j-1 >= 0:
@@ -32,14 +35,12 @@ def encontrarnavios(matriz,i,j,n):
          encontrarnavios(matriz,i,j+1,n)
     
 
-
+#Tabuleiro---------------------------------------
 matriz = [] #tabuleiro e lista dos tamanhos de navios
 l,c = map(int,input().split()) #linha e coluna
 for i in range(l):
     lin=[];lin.extend(input())
     matriz.append(lin)
-'''  linha = input()
-    matriz.append(linha)'''
 
             
     
