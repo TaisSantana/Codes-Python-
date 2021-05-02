@@ -97,26 +97,6 @@ class LDE:
                         a.getprev().setnex(a.getnex())
                 a = a.getnex()
             
-            
-            '''if val == self.getInicio():
-                if a.getnex() == None: #se for unico elem lista ficará vazia
-                    self.setInicio(None)
-                    self.setEnd(None)     #<------adicionei isso
-                else:
-                    a.getnex().setprev(None)
-                    self.setInicio(a.getnex())
-
-            elif val == self.getEnd():
-                if a.getprev() == None:
-                    self.setEnd(None) #substitui fim por Nada.
-                    self.setInicio(None)
-                else:
-                    a.getprev().setnex(None)
-                    self.setEnd(a.getprev()) #adc anterior como o fim da list
-            else:
-                a.getprev().setnex(a.getnex())
-                a.getnex().setprev(a.getprev())'''
-            
 
     def __str__(self):
         s = ''
